@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node
+node_modules/
+package-lock.json
+
+# Raw telemetry / captures (often large and may contain sensitive data)
+data/filebeatdata/
+data/winlogbeatdata/
+data/network data/
+*.ndjson
+*.pcap
+*.pcapng
+
+# Runtime-generated logs & reports
+alerts/alerts.log
+alerts/mitigation_log.txt
+analysis and correlation/analysis_report/analysis_report.txt
+
+# IOC lists (optional — remove this line if you want bad_ips.txt public)
+# iocs/bad_ips.txt
+
+# Editor / OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Stray placeholder files
+New Text Document*.txt

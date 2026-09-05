@@ -1,0 +1,11 @@
+# Core dependencies for the detection, correlation, and mitigation engine.
+# Review and adjust to match the exact imports in your .py files.
+
+scapy>=2.5.0
+pyshark>=0.6
+elasticsearch>=8.0.0
+
+# Uncomment if your rule modules or main_controller.py use these:
+# requests
+# python-dotenv
+# psutil

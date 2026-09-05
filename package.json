@@ -1,0 +1,10 @@
+{
+  "name": "cyber-incident-response-framework",
+  "version": "1.0.0",
+  "description": "Alert-parsing utility for the Autonomous Cyber Incident Response Framework dashboard.",
+  "main": "utils/alertParser.js",
+  "scripts": {
+    "parse-alerts": "node utils/alertParser.js"
+  },
+  "license": "MIT"
+}

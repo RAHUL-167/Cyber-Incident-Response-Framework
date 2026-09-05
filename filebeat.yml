@@ -1,0 +1,24 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - C:\ThreatDetection\data\filebeatdata\*.ndjson
+      - C:\ThreatDetection\alerts\alerts.log
+    json.keys_under_root: true
+    json.add_error_key: true
+    multiline.pattern: '^\['
+    multiline.negate: true
+    multiline.match: after
+
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]
+  index: "threatdetection-%{+yyyy.MM.dd}"
+
+setup.kibana:
+  host: "http://localhost:5601"
+
+setup.ilm.enabled: false
+setup.template.name: "threatdetection"
+setup.template.pattern: "threatdetection-*"
+
+logging.level: info
